@@ -132,7 +132,3 @@ highestwholesale=daily_wholesaleprice.alias('w').join(highestwholesale.alias('h'
                                                       (daily_wholesaleprice['Wholesale Price (RMB/kg)']==highestwholesale['highest wholesale price']),'inner').select(f.column('w.year'),f.column('w.item Code'),f.column('h.highest wholesale price'))
 highestwholesale=highestwholesale.distinct()
 display(highestwholesale)
-
-# COMMAND ----------
-
-
